@@ -1,0 +1,4 @@
+# gateway-auth
+gateway+webflux+security+jwt，模拟oauth2做服务中台
+
+gateway只做服务路由，authorization服务相当于oauth2里面的授权服务器，authentication可以作为依赖加入资源服务器做鉴权
