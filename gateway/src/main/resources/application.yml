@@ -1,0 +1,27 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+server:
+  port: 9001
+spring:
+  application:
+    name: zt-gateway
+  cloud:
+    gateway:
+      enabled: true
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: commonRoute
+        uri: lb://${serviceId}
+        predicates:
+        - Path=/${serviceId}/**
+        filters:
+        - RewritePath=/${serviceId}/(?<segment>.*), /$\{segment}
+        
+          

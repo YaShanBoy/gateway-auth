@@ -1,0 +1,8 @@
+security:
+  publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQChYO1Pxae977ff7/iY3bSKwOG3Z2QngSydpnoTnaPgvs0w2qJrnue+rCYIWbT2l7AIqvzIXvPVwizOiOra2Tiuv609G1vf2ENgwnHj3XKby4HYw+ZrvjdptX1ZdaJViW2/VId2h6OqFF7b+/tBo5n8VqvXlurNroGVVaWKHCs6qwIDAQAB
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      default-zone: http://localhost:8761/eureka/
